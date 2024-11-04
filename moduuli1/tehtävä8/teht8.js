@@ -13,7 +13,7 @@ function isLeap(year) {
 let startYear = parseInt(prompt('Enter a start year.'));
 let endYear = parseInt(prompt('Enter a end year.'));
 
-let leapList = '';
+let leapList;
 
 for (let i = startYear; i <= endYear; i++) {
   if (isLeap(i)) {
