@@ -3,7 +3,7 @@
 //Funktio ottaa min ja max luvut, ja kaavalla math.random tekee float luvun välillä 0-1
 // se kerrottaan maximilla ja plussataan minimi jotta ei mennä alle sen
 function getRandomInt(minInt, maxInt) {
-  return Math.floor(Math.random() * maxInt + minInt);
+  return Math.floor(Math.random() * (maxInt - minInt) + minInt);
 }
 
 
