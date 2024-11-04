@@ -11,6 +11,7 @@ function getRandomInt(minInt, maxInt) {
 const name = prompt('Hattu kysyy nimeäsi. Syötä nimi.');
 var house = ''
 
+
 //Valinta rakenne killan arvontaa varten
 switch (getRandomInt(1,4)) {
   case 1:
