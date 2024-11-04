@@ -9,7 +9,7 @@ function isLeap(year) {
   return isLeap;
 }
 
-
+//kysytään alkuvuosi ja loppuvuosi
 let startYear = parseInt(prompt('Enter a start year.'));
 let endYear = parseInt(prompt('Enter a end year.'));
 

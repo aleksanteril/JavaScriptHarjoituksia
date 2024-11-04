@@ -1,9 +1,9 @@
 'use strict';
 
 //Funktio ottaa min ja max luvut, ja kaavalla math.random tekee float luvun välillä 0-1
-// se kerrottaan maximilla ja plussataan minimi jotta ei mennä alle sen
+// muutetaan randomia siten että 1 <= x <= 4. eli math.random * 4 ja + 1 ja floor.
 function getRandomInt(minInt, maxInt) {
-  return Math.floor(Math.random() * (maxInt - minInt) + minInt);
+  return Math.floor(Math.random() * maxInt + minInt);
 }
 
 
