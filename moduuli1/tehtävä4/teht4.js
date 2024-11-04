@@ -9,7 +9,7 @@ function getRandomInt(minInt, maxInt) {
 
 //Kysytään käyttäjän nimi ja asetetaan house muuttuja
 const name = prompt('Hattu kysyy nimeäsi. Syötä nimi.');
-var house = ''
+let house;
 
 
 //Valinta rakenne killan arvontaa varten
