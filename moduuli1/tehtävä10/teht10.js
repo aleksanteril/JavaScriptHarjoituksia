@@ -18,9 +18,7 @@ for (let i = 0; i < throwAmount; i++) {
     for (let i = 0; i < numberDice; i++) {
         simulatedsumDice += diceRoll();
     }
-    if (sumDice === simulatedsumDice) {
-        counter += 1;
-    }
+    if (sumDice === simulatedsumDice) counter++;
 }
 
 //Tulokset html tiedostoon
