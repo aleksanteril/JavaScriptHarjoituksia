@@ -93,12 +93,33 @@ const picArray = [
 ];
 
 // add your code here
-const section = document.querySelector('#pictures')
 
+//Modal avaaminen oikealla kuvalla
+function showModal(i) {
+    const modalImage = document.querySelector('dialog > img');
+    modalImage.src = picArray[i].image.large;
+    modalImage.alt = picArray[i].title
+    modal.style.display = 'block';
+}
+
+//Modal sulkeminen
+const closeButton = document.querySelector('span');
+closeButton.addEventListener('click', () => modal.style.display = 'none');
+
+
+//Laitetaan modaalille halutut asetukset
+const modal = document.querySelector('dialog');
+modal.style.position = 'fixed';
+modal.style.top = '20%';
+modal.style.zIndex = '1';
+
+//Artikkelien ja kuvien luominen
+const section = document.querySelector('#pictures')
 for (let i=0; i < picArray.length; i++) {
-    //Luodaan article element
+    //Luodaan article element, ja sille event listener
     const article = document.createElement("article");
     article.className = 'card';
+    article.addEventListener('click', () => showModal(i));
 
     //Luodaan heading element ja teksti sille
     const heading2 = document.createElement("h2");
@@ -125,4 +146,5 @@ for (let i=0; i < picArray.length; i++) {
 
     //yhdistetään artikkeli oikeaan kohtaan alle
     section.appendChild(article);
+
 }

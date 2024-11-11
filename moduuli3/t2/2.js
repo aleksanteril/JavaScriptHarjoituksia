@@ -1,7 +1,7 @@
 'use strict';
 
 const ulList = document.querySelector('#target');
-let textArray = ['First item', 'Second item', 'Third item'];
+let picArray = ['First item', 'Second item', 'Third item'];
 
 
 for (let i = 0; i < 3; i++) {
