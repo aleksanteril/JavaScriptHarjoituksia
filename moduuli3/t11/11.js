@@ -93,25 +93,16 @@ const picArray = [
 ];
 
 // add your code here
-
-//Modal avaaminen oikealla kuvalla
-function showModal(i) {
-    const modalImage = document.querySelector('dialog > img');
-    modalImage.src = picArray[i].image.large;
-    modalImage.alt = picArray[i].title
-    modal.style.display = 'block';
-}
+//Modal kuva
+const modalImg = document.querySelector('dialog > img')
 
 //Modal sulkeminen
 const closeButton = document.querySelector('span');
-closeButton.addEventListener('click', () => modal.style.display = 'none');
+closeButton.addEventListener('click', () => modal.close());
 
 
 //Laitetaan modaalille halutut asetukset
 const modal = document.querySelector('dialog');
-modal.style.position = 'fixed';
-modal.style.top = '20%';
-modal.style.zIndex = '1';
 
 //Artikkelien ja kuvien luominen
 const section = document.querySelector('#pictures')
@@ -119,7 +110,11 @@ for (let i=0; i < picArray.length; i++) {
     //Luodaan article element, ja sille event listener
     const article = document.createElement("article");
     article.className = 'card';
-    article.addEventListener('click', () => showModal(i));
+    article.addEventListener('click', () => {
+        modalImg.src = picArray[i].image.large;
+        modalImg.alt = picArray[i].title;
+        modal.showModal()
+    });
 
     //Luodaan heading element ja teksti sille
     const heading2 = document.createElement("h2");
@@ -129,7 +124,7 @@ for (let i=0; i < picArray.length; i++) {
     const figure = document.createElement("figure");
     const img = document.createElement("img");
     img.src = picArray[i].image.medium;
-    img.alt = document.createTextNode(picArray[i].title).toString();
+    img.alt = picArray[i].title;
     const figcaption = document.createElement("figcaption");
     figcaption.appendChild(document.createTextNode(picArray[i].caption))
     figure.appendChild(img);
@@ -146,5 +141,4 @@ for (let i=0; i < picArray.length; i++) {
 
     //yhdistetään artikkeli oikeaan kohtaan alle
     section.appendChild(article);
-
 }
