@@ -7,12 +7,11 @@ const numArray = [];
 let loopRun = true;
 while (loopRun) {
     const userInput = +prompt('Enter a number');
-    if (!isNaN(userInput) && !numArray.includes(userInput)) {
-        numArray.push(userInput);
-    } else {
+    if (numArray.includes(userInput)) {
         console.log('The number has already been entered, ending program!');
         loopRun = false;
     }
+    else if (!isNaN(userInput)) numArray.push(userInput);
 }
 
 //Listataan konsoliin
