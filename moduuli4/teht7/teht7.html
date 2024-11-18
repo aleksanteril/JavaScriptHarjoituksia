@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Task 7</title>
-  <script src="teht7.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="Polyline.encoded.js"></script>
+    <script src="teht7.js" defer></script>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
 <h1>Etsi paikka ja reitti</h1>
@@ -11,5 +15,7 @@
   <input id="query" type="text">
   <input type="submit" value="Search">
 </form>
+<div id="map"></div>
+<p id="routeTime"></p>
 </body>
 </html>
