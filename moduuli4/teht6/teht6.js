@@ -1,3 +1,4 @@
+'use strict';
 
 function jokesElements(jokes) {
     for (let joke of jokes.result) {

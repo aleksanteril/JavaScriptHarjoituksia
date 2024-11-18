@@ -1,4 +1,4 @@
-
+'use strict';
 
 // h2 = name, a = url of show, img = medium image, div = summary: kaikki tämä article alle
 function showsElements(dataArray) {

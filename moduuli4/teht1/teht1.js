@@ -1,4 +1,4 @@
-
+'use strict';
 
 const queryParam = document.querySelector('#query');
 const queryUrl = 'https://api.tvmaze.com/search/shows?q=';
